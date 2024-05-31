@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col h-screen justify-between">
+<!-- Navigation Bar -->
+<nav class="flex justify-end p-4 space-x-4 text-sm text-gray-700">
+    <a href="chat.html" class="hover:underline">Chat</a>
+    <a href="doc_management.html" class="hover:underline">Documents</a>
+    <a href="doc_search.html" class="hover:underline">Search</a>
+    <div class="w-8 h-8 rounded-full bg-gray-300"></div>
+</nav>
+
+<!-- Main Content -->
+<main class="flex flex-col items-center justify-center flex-grow">
+    <!-- Logo Section -->
+    <div class="mb-8">
+        <img src="assets/img/logo.png" alt="Ray's Search Logo"
+             class="w-32 h-auto mx-auto">
+    </div>
+
+    <!-- Search Bar -->
+    <div class="flex items-center w-full max-w-md mx-auto border border-gray-200 rounded-full px-4 py-2">
+        <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/search.svg" alt="Search"
+             class="w-5 h-5 mr-3 text-gray-500">
+        <input type="text" class="flex-grow focus:outline-none">
+        <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/mic.svg" alt="Mic"
+             class="w-5 h-5 ml-3 text-gray-500">
+    </div>
+
+    <!-- Search Buttons -->
+    <div class="flex space-x-4 mt-8">
+        <button class="bg-gray-100 text-gray-700 py-2 px-4 rounded hover:shadow">Ray's Search</button>
+    </div>
+</main>
+
+</body>
+</html>
