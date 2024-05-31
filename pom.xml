@@ -116,7 +116,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <!--这个参数也非常关键-->
                     <fork>true</fork>
                     <excludes>
                         <exclude>
