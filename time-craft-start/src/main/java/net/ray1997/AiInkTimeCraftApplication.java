@@ -1,6 +1,5 @@
 package net.ray1997;
 
-import org.springframework.ai.autoconfigure.vectorstore.qdrant.QdrantVectorStoreAutoConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.actuate.autoconfigure.data.redis.RedisHealthContributorAutoConfiguration;
 import org.springframework.boot.actuate.autoconfigure.data.redis.RedisReactiveHealthContributorAutoConfiguration;
@@ -12,11 +11,9 @@ import org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoCo
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, QdrantVectorStoreAutoConfiguration.class,
-        LettuceMetricsAutoConfiguration.class, RedisRepositoriesAutoConfiguration.class,
-        RedisReactiveHealthContributorAutoConfiguration.class, RedisReactiveAutoConfiguration.class,
-        RedisHealthContributorAutoConfiguration.class, ManagementWebSecurityAutoConfiguration.class,
-        SecurityAutoConfiguration.class
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, LettuceMetricsAutoConfiguration.class,
+        RedisRepositoriesAutoConfiguration.class, RedisReactiveHealthContributorAutoConfiguration.class, RedisReactiveAutoConfiguration.class, RedisHealthContributorAutoConfiguration.class,
+        ManagementWebSecurityAutoConfiguration.class, SecurityAutoConfiguration.class
 
 })
 public class AiInkTimeCraftApplication {
