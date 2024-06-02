@@ -17,7 +17,7 @@ import reactor.core.publisher.Flux;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/ai")
+@RequestMapping("api/ai")
 public class ChatController {
 
     private static final String VOICE_STYLE = "teacher";
@@ -25,7 +25,7 @@ public class ChatController {
     @Resource
     OllamaChatModel chatModel;
 
-    @GetMapping("/chat/{prompt}")
+    @GetMapping("chat/{prompt}")
     public Flux<ChatResponse> chat(@PathVariable String prompt) {
 
         final List<Message> msg = Lists.newArrayList(
