@@ -20,6 +20,14 @@
         <spring-ai.version>1.0.0-M1</spring-ai.version>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>net.ray1997</groupId>
+            <artifactId>time-craft-application</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
