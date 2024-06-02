@@ -10,7 +10,6 @@ import org.springframework.boot.autoconfigure.data.redis.RedisReactiveAutoConfig
 import org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
-import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class,
         LettuceMetricsAutoConfiguration.class,
@@ -20,7 +19,6 @@ import org.springframework.context.annotation.ComponentScan;
         RedisHealthContributorAutoConfiguration.class,
         ManagementWebSecurityAutoConfiguration.class,
         SecurityAutoConfiguration.class})
-@ComponentScan(basePackages = {"net.ray1997"})
 public class AiInkTimeCraftApplication {
 
     public static void main(String[] args) {

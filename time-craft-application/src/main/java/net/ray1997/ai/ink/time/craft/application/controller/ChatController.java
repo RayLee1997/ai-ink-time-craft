@@ -17,7 +17,7 @@ import reactor.core.publisher.Flux;
 import java.util.List;
 
 @RestController
-@RequestMapping("/ai")
+@RequestMapping(path = "/ai")
 public class ChatController {
 
     private static final String VOICE_STYLE = "teacher";
