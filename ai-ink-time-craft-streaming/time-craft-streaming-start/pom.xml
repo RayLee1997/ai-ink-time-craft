@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>net.ray1997</groupId>
-        <artifactId>ai-ink-time-craft</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <artifactId>ai-ink-time-craft-streaming</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -21,11 +21,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>net.ray1997</groupId>
-            <artifactId>time-craft-streaming-application</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
     </dependencies>
 
     <build>

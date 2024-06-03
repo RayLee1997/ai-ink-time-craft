@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>net.ray1997</groupId>
-        <artifactId>ai-ink-time-craft</artifactId>
+        <artifactId>ai-ink-time-craft-web</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
