@@ -1,4 +1,4 @@
-package net.ray1997.ai.ink.time.craft.common;
+package net.ray1997.ai.chatbox.utility;
 
 import org.springframework.ai.chat.messages.SystemMessage;
 
