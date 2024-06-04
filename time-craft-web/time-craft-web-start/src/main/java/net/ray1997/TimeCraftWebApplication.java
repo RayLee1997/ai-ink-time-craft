@@ -13,11 +13,13 @@ import org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoCo
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, LettuceMetricsAutoConfiguration.class,
-        RedisRepositoriesAutoConfiguration.class, RedisReactiveHealthContributorAutoConfiguration.class,
-        RedisReactiveAutoConfiguration.class, RedisHealthContributorAutoConfiguration.class,
-        ManagementWebSecurityAutoConfiguration.class, SecurityAutoConfiguration.class,
-        QdrantVectorStoreAutoConfiguration.class, OllamaAutoConfiguration.class})
+@SpringBootApplication(
+        exclude = {DataSourceAutoConfiguration.class, LettuceMetricsAutoConfiguration.class,
+                RedisRepositoriesAutoConfiguration.class, RedisReactiveHealthContributorAutoConfiguration.class,
+                RedisReactiveAutoConfiguration.class, RedisHealthContributorAutoConfiguration.class,
+                ManagementWebSecurityAutoConfiguration.class, SecurityAutoConfiguration.class,
+                QdrantVectorStoreAutoConfiguration.class, OllamaAutoConfiguration.class}
+)
 public class TimeCraftWebApplication {
 
     public static void main(String[] args) {
