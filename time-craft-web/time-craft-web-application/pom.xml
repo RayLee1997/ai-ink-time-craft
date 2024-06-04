@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>net.ray1997</groupId>
-        <artifactId>ai-ink-time-craft</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <artifactId>time-craft-web</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>time-craft-repository</artifactId>
+    <artifactId>time-craft-web-application</artifactId>
     <packaging>jar</packaging>
 
     <properties>
@@ -19,4 +19,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>net.ray1997</groupId>
+            <artifactId>time-craft-utility</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
+    </dependencies>
 </project>

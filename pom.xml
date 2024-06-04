@@ -11,18 +11,24 @@
 
     <groupId>net.ray1997</groupId>
     <artifactId>ai-ink-time-craft</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>ai-ink-time-craft</name>
     <description>ai-ink-time-craft</description>
 
+    <properties>
+        <maven.compiler.source>22</maven.compiler.source>
+        <maven.compiler.target>22</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>22</java.version>
+        <spring-ai.version>1.0.0-M1</spring-ai.version>
+    </properties>
+
     <modules>
-        <module>time-craft-utility</module>
-        <module>time-craft-repository</module>
-        <module>time-craft-service</module>
-        <module>ai-ink-time-craft-streaming</module>
-        <module>ai-ink-time-craft-web</module>
+        <module>time-craft-streaming</module>
+        <module>time-craft-web</module>
+        <module>time-craft-shared</module>
     </modules>
 
 </project>
