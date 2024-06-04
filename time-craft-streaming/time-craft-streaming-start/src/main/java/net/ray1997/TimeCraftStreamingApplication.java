@@ -11,10 +11,10 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, RedisRepositoriesAutoConfiguration.class,
         RedisReactiveAutoConfiguration.class, SecurityAutoConfiguration.class,
         QdrantVectorStoreAutoConfiguration.class})
-public class AiInkTimeCraftApplication {
+public class TimeCraftStreamingApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AiInkTimeCraftApplication.class, args);
+        SpringApplication.run(TimeCraftStreamingApplication.class, args);
     }
 
 }
