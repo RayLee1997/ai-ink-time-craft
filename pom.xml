@@ -23,6 +23,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>22</java.version>
         <spring-ai.version>1.0.0-M1</spring-ai.version>
+        <time.craft.version>1.0.0-SNAPSHOT</time.craft.version>
     </properties>
 
     <modules>

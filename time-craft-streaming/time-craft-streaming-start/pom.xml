@@ -21,6 +21,11 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>net.ray1997</groupId>
+            <artifactId>time-craft-streaming-application</artifactId>
+            <version>${time.craft.version}</version>
+        </dependency>
     </dependencies>
 
     <build>

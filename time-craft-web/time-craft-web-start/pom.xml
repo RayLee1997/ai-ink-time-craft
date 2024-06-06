@@ -21,7 +21,11 @@
     </properties>
 
     <dependencies>
-
+        <dependency>
+            <groupId>net.ray1997</groupId>
+            <artifactId>time-craft-web-application</artifactId>
+            <version>${time.craft.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -51,7 +55,7 @@
                         <configuration>
                             <target>
                                 <unzip src="${project.build.directory}/${project.build.finalName}.${project.packaging}"
-                                       dest="${project.build.directory}/ai-ink-time-craft"/>
+                                       dest="${project.build.directory}/ai-ink-time-craft-web"/>
                             </target>
                         </configuration>
                     </execution>

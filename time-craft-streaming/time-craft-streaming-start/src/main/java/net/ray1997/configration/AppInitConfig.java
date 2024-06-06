@@ -16,7 +16,7 @@ public class AppInitConfig {
     @Value("${spring.ai.ollama.embedding.options.model}")
     private String ollamaEmbeddingModel;
 
-    @Bean
+//    @Bean
     OllamaChatModel ollamaChatModel() {
         final OllamaApi ollamaApi = new OllamaApi(ollamaBaseUrl);
 
