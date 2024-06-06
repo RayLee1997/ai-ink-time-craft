@@ -1,8 +1,10 @@
 package net.ray1997.time.craft.streaming.chatbox.api.controller;
 
 import com.google.common.collect.Lists;
+import jakarta.annotation.Resource;
+import lombok.extern.slf4j.Slf4j;
+import net.ray1997.time.craft.streaming.chatbox.service.ChatBoxService;
 import net.ray1997.time.craft.streaming.chatbox.utility.MessageUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.ai.chat.messages.Message;
 import org.springframework.ai.chat.messages.UserMessage;
 import org.springframework.ai.chat.model.ChatResponse;
@@ -20,12 +22,16 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
+@Slf4j
 public class ChatController {
 
     private static final String VOICE_STYLE = "teacher";
 
     //    @Resource
     OllamaChatModel chatModel;
+
+    @Resource
+    ChatBoxService chatBoxService;
 
     @GetMapping(
             value = "/chat/{prompt}",
@@ -44,7 +50,7 @@ public class ChatController {
             value = "/sse/{prompt}",
             produces = MediaType.TEXT_EVENT_STREAM_VALUE
     )
-    public Flux<ServerSentEvent<String>> flux(@PathVariable String prompt) {
+    public Flux<ServerSentEvent<String>> sse(@PathVariable String prompt) {
         return Flux.just("hello", "world", "from", prompt)
                    .map(s -> {
                        try {
@@ -56,26 +62,19 @@ public class ChatController {
                                              .data(s)
                                              .build();
                    });
-        //
-        //        return Flux.interval(Duration.ofSeconds(1))
-        //                   .map(sequence -> ServerSentEvent.<List<String>>builder()
-        //                                                   .id(String.valueOf(sequence))
-        //                                                   .event("user-list-event")
-        //                                                   .data(this.getSendData(prompt)
-        //                                                             .stream()
-        //                                                             .map(w -> w + " ")
-        //                                                             .toList())
-        //                                                   .build());
     }
 
-    public List<String> getSendData(String prompt) {
-        if (StringUtils.isBlank(prompt)) {
-            prompt = "Ray's AI time craft!";
+    @GetMapping(
+            value = "/async/{prompt}",
+            produces = MediaType.TEXT_PLAIN_VALUE
+    )
+    public String asyncGetData(String prompt) {
+        try {
+            return chatBoxService.chat(prompt)
+                                 .get();
+        } catch (Throwable e) {
+            log.error("asyncGetData has error!", e);
+            throw new RuntimeException(e);
         }
-
-        final List<String> words = Lists.newArrayList("hello", "world", "from");
-        words.add(prompt);
-
-        return words;
     }
 }
