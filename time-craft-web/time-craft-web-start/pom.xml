@@ -26,6 +26,11 @@
             <artifactId>time-craft-web-application</artifactId>
             <version>${time.craft.version}</version>
         </dependency>
+        <dependency>
+            <groupId>net.ray1997</groupId>
+            <artifactId>time-craft-repository</artifactId>
+            <version>${time.craft.version}</version>
+        </dependency>
     </dependencies>
 
     <build>

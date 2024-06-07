@@ -15,6 +15,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>time-craft-client</module>
         <module>time-craft-utility</module>
         <module>time-craft-repository</module>
         <module>time-craft-service</module>
