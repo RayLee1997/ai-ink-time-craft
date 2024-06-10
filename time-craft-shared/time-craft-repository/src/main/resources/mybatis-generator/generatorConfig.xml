@@ -13,23 +13,24 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://192.168.2.65:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true"
+                        connectionURL="jdbc:mysql://192.168.2.65:3306/test?serverTimezone=UTC%26useUnicode=true%26characterEncoding=utf-8%26useSSL=true"
                         userId="root"
                         password="root"/>
 
         <javaModelGenerator targetPackage="net.ray1997.time.craft.repository.mapper"
-                            targetProject="/Users/ray/github/ai-ink-time-craft/time-craft-shared/time-craft-repository/src/main/java">
+                            targetProject="/Users/lu/ray/workspaces/ai-ink-time-craft/time-craft-shared/time-craft-repository/src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
         <sqlMapGenerator targetPackage="mybatis.mapper.xml"
-                         targetProject="/Users/ray/github/ai-ink-time-craft/time-craft-shared/time-craft-repository/src/main/resources">
+                         targetProject="/Users/lu/ray/workspaces/ai-ink-time-craft/time-craft-shared/time-craft-repository/src/main/resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator targetPackage="ctas.test.mapper"
-                             targetProject="D:/yangjm/Code/CTAS/JAVAEE/CTAS2CCSP/src/main/java" type="XMLMAPPER">
+        <javaClientGenerator targetPackage="net.ray1997.mapper"
+                             targetProject="/Users/lu/ray/workspaces/ai-ink-time-craft/time-craft-shared/time-craft-repository/src/test/java"
+                             type="XMLMAPPER">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 

@@ -10,7 +10,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>ai-ink-time-craft-streaming-start</artifactId>
+    <artifactId>time-craft-streaming-start</artifactId>
     <packaging>jar</packaging>
 
     <properties>

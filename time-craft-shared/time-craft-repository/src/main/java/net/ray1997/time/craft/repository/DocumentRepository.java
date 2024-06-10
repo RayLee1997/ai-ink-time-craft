@@ -1,4 +1,4 @@
-package net.ray1997.time.craft.repository.mapper;
+package net.ray1997.time.craft.repository;
 
 import net.ray1997.time.craft.client.dto.DocumentQuery;
 import net.ray1997.time.craft.entity.Document;
