@@ -33,7 +33,7 @@
         <javaModelGenerator targetPackage="net.ray1997.time.craft.repository.entity"
                             targetProject="time-craft-repository/src/main/java"/>
         <!--指定生成mapper接口的的路径-->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="net.ray1997.time.craft.repository"
+        <javaClientGenerator type="XMLMAPPER" targetPackage="net.ray1997.time.craft.repository.mapper"
                              targetProject="time-craft-repository/src/main/java"/>
 
         <!--生成全部表tableName设为%-->

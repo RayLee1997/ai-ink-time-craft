@@ -1,6 +1,6 @@
-package net.ray1997.time.craft.repository;
+package net.ray1997.time.craft.repository.mapper;
 
-import static net.ray1997.time.craft.repository.DocumentDynamicSqlSupport.*;
+import static net.ray1997.time.craft.repository.mapper.DocumentDynamicSqlSupport.*;
 import static org.mybatis.dynamic.sql.SqlBuilder.isEqualTo;
 
 import jakarta.annotation.Generated;

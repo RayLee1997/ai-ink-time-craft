@@ -1,4 +1,4 @@
-package net.ray1997.time.craft.repository;
+package net.ray1997.time.craft.repository.mapper;
 
 import jakarta.annotation.Generated;
 import java.sql.JDBCType;
