@@ -7,43 +7,43 @@ import org.mybatis.dynamic.sql.AliasableSqlTable;
 import org.mybatis.dynamic.sql.SqlColumn;
 
 public final class DocumentDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: documents")
+    @Generated("org.mybatis.generator.api.MyBatisGenerator")
     public static final Document document = new Document();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: documents.id")
+    @Generated("org.mybatis.generator.api.MyBatisGenerator")
     public static final SqlColumn<Long> id = document.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: documents.uid")
+    @Generated("org.mybatis.generator.api.MyBatisGenerator")
     public static final SqlColumn<String> uid = document.uid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: documents.name")
+    @Generated("org.mybatis.generator.api.MyBatisGenerator")
     public static final SqlColumn<String> name = document.name;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: documents.type")
+    @Generated("org.mybatis.generator.api.MyBatisGenerator")
     public static final SqlColumn<String> type = document.type;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: documents.group")
+    @Generated("org.mybatis.generator.api.MyBatisGenerator")
     public static final SqlColumn<String> group = document.group;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: documents.location")
+    @Generated("org.mybatis.generator.api.MyBatisGenerator")
     public static final SqlColumn<String> location = document.location;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: documents.status")
+    @Generated("org.mybatis.generator.api.MyBatisGenerator")
     public static final SqlColumn<Integer> status = document.status;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: documents.creator")
+    @Generated("org.mybatis.generator.api.MyBatisGenerator")
     public static final SqlColumn<String> creator = document.creator;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: documents.gmt_create")
+    @Generated("org.mybatis.generator.api.MyBatisGenerator")
     public static final SqlColumn<Date> gmtCreate = document.gmtCreate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: documents.gmt_modified")
+    @Generated("org.mybatis.generator.api.MyBatisGenerator")
     public static final SqlColumn<Date> gmtModified = document.gmtModified;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: documents.extensions")
+    @Generated("org.mybatis.generator.api.MyBatisGenerator")
     public static final SqlColumn<String> extensions = document.extensions;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: documents")
+    @Generated("org.mybatis.generator.api.MyBatisGenerator")
     public static final class Document extends AliasableSqlTable<Document> {
         public final SqlColumn<Long> id = column("id", JDBCType.BIGINT);
 
