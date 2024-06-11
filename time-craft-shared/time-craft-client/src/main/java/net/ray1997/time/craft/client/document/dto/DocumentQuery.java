@@ -1,4 +1,4 @@
-package net.ray1997.time.craft.client.dto;
+package net.ray1997.time.craft.client.document.dto;
 
 import lombok.Builder;
 import lombok.Data;

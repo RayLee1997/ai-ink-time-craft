@@ -1,4 +1,4 @@
-package net.ray1997.time.craft.entity;
+package net.ray1997.time.craft.client.document.dto;
 
 import lombok.Builder;
 import lombok.Data;
@@ -11,7 +11,7 @@ import java.util.Date;
  */
 @Builder
 @Data
-public class Document implements Serializable {
+public class DocumentDTO implements Serializable {
 
     private Integer id;
     private String name;
