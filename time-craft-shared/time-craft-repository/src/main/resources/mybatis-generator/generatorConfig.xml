@@ -37,7 +37,7 @@
                              targetProject="time-craft-repository/src/main/java"/>
 
         <!--生成全部表tableName设为%-->
-        <table tableName="document" domainObjectName="DocumentPO">
+        <table tableName="documents" domainObjectName="Document">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
     </context>

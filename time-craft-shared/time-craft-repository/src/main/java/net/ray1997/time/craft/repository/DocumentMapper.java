@@ -1,12 +1,12 @@
 package net.ray1997.time.craft.repository;
 
-import static net.ray1997.time.craft.repository.DocumentPODynamicSqlSupport.*;
+import static net.ray1997.time.craft.repository.DocumentDynamicSqlSupport.*;
 import static org.mybatis.dynamic.sql.SqlBuilder.isEqualTo;
 
 import jakarta.annotation.Generated;
 import java.util.List;
 import java.util.Optional;
-import net.ray1997.time.craft.repository.entity.DocumentPO;
+import net.ray1997.time.craft.repository.entity.Document;
 import org.apache.ibatis.annotations.InsertProvider;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Result;
@@ -31,18 +31,18 @@ import org.mybatis.dynamic.sql.util.mybatis3.CommonUpdateMapper;
 import org.mybatis.dynamic.sql.util.mybatis3.MyBatis3Utils;
 
 @Mapper
-public interface DocumentPOMapper extends CommonCountMapper, CommonDeleteMapper, CommonUpdateMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: document")
+public interface DocumentMapper extends CommonCountMapper, CommonDeleteMapper, CommonUpdateMapper {
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: documents")
     BasicColumn[] selectList = BasicColumn.columnList(id, uid, name, type, group, location, status, creator, gmtCreate, gmtModified, extensions);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: document")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: documents")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT LAST_INSERT_ID()", keyProperty="row.id", before=false, resultType=Long.class)
-    int insert(InsertStatementProvider<DocumentPO> insertStatement);
+    int insert(InsertStatementProvider<Document> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: document")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: documents")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
-    @Results(id="DocumentPOResult", value = {
+    @Results(id="DocumentResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.BIGINT, id=true),
         @Result(column="uid", property="uid", jdbcType=JdbcType.VARCHAR),
         @Result(column="name", property="name", jdbcType=JdbcType.VARCHAR),
@@ -55,33 +55,33 @@ public interface DocumentPOMapper extends CommonCountMapper, CommonDeleteMapper,
         @Result(column="gmt_modified", property="gmtModified", jdbcType=JdbcType.TIMESTAMP),
         @Result(column="extensions", property="extensions", jdbcType=JdbcType.LONGVARCHAR)
     })
-    List<DocumentPO> selectMany(SelectStatementProvider selectStatement);
+    List<Document> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: document")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: documents")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
-    @ResultMap("DocumentPOResult")
-    Optional<DocumentPO> selectOne(SelectStatementProvider selectStatement);
+    @ResultMap("DocumentResult")
+    Optional<Document> selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: document")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: documents")
     default long count(CountDSLCompleter completer) {
-        return MyBatis3Utils.countFrom(this::count, documentPO, completer);
+        return MyBatis3Utils.countFrom(this::count, document, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: document")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: documents")
     default int delete(DeleteDSLCompleter completer) {
-        return MyBatis3Utils.deleteFrom(this::delete, documentPO, completer);
+        return MyBatis3Utils.deleteFrom(this::delete, document, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: document")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: documents")
     default int deleteByPrimaryKey(Long id_) {
         return delete(c -> 
             c.where(id, isEqualTo(id_))
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: document")
-    default int insert(DocumentPO row) {
-        return MyBatis3Utils.insert(this::insert, row, documentPO, c ->
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: documents")
+    default int insert(Document row) {
+        return MyBatis3Utils.insert(this::insert, row, document, c ->
             c.map(uid).toProperty("uid")
             .map(name).toProperty("name")
             .map(type).toProperty("type")
@@ -95,9 +95,9 @@ public interface DocumentPOMapper extends CommonCountMapper, CommonDeleteMapper,
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: document")
-    default int insertSelective(DocumentPO row) {
-        return MyBatis3Utils.insert(this::insert, row, documentPO, c ->
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: documents")
+    default int insertSelective(Document row) {
+        return MyBatis3Utils.insert(this::insert, row, document, c ->
             c.map(uid).toPropertyWhenPresent("uid", row::getUid)
             .map(name).toPropertyWhenPresent("name", row::getName)
             .map(type).toPropertyWhenPresent("type", row::getType)
@@ -111,35 +111,35 @@ public interface DocumentPOMapper extends CommonCountMapper, CommonDeleteMapper,
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: document")
-    default Optional<DocumentPO> selectOne(SelectDSLCompleter completer) {
-        return MyBatis3Utils.selectOne(this::selectOne, selectList, documentPO, completer);
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: documents")
+    default Optional<Document> selectOne(SelectDSLCompleter completer) {
+        return MyBatis3Utils.selectOne(this::selectOne, selectList, document, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: document")
-    default List<DocumentPO> select(SelectDSLCompleter completer) {
-        return MyBatis3Utils.selectList(this::selectMany, selectList, documentPO, completer);
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: documents")
+    default List<Document> select(SelectDSLCompleter completer) {
+        return MyBatis3Utils.selectList(this::selectMany, selectList, document, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: document")
-    default List<DocumentPO> selectDistinct(SelectDSLCompleter completer) {
-        return MyBatis3Utils.selectDistinct(this::selectMany, selectList, documentPO, completer);
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: documents")
+    default List<Document> selectDistinct(SelectDSLCompleter completer) {
+        return MyBatis3Utils.selectDistinct(this::selectMany, selectList, document, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: document")
-    default Optional<DocumentPO> selectByPrimaryKey(Long id_) {
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: documents")
+    default Optional<Document> selectByPrimaryKey(Long id_) {
         return selectOne(c ->
             c.where(id, isEqualTo(id_))
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: document")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: documents")
     default int update(UpdateDSLCompleter completer) {
-        return MyBatis3Utils.update(this::update, documentPO, completer);
+        return MyBatis3Utils.update(this::update, document, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: document")
-    static UpdateDSL<UpdateModel> updateAllColumns(DocumentPO row, UpdateDSL<UpdateModel> dsl) {
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: documents")
+    static UpdateDSL<UpdateModel> updateAllColumns(Document row, UpdateDSL<UpdateModel> dsl) {
         return dsl.set(uid).equalTo(row::getUid)
                 .set(name).equalTo(row::getName)
                 .set(type).equalTo(row::getType)
@@ -152,8 +152,8 @@ public interface DocumentPOMapper extends CommonCountMapper, CommonDeleteMapper,
                 .set(extensions).equalTo(row::getExtensions);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: document")
-    static UpdateDSL<UpdateModel> updateSelectiveColumns(DocumentPO row, UpdateDSL<UpdateModel> dsl) {
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: documents")
+    static UpdateDSL<UpdateModel> updateSelectiveColumns(Document row, UpdateDSL<UpdateModel> dsl) {
         return dsl.set(uid).equalToWhenPresent(row::getUid)
                 .set(name).equalToWhenPresent(row::getName)
                 .set(type).equalToWhenPresent(row::getType)
@@ -166,8 +166,8 @@ public interface DocumentPOMapper extends CommonCountMapper, CommonDeleteMapper,
                 .set(extensions).equalToWhenPresent(row::getExtensions);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: document")
-    default int updateByPrimaryKey(DocumentPO row) {
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: documents")
+    default int updateByPrimaryKey(Document row) {
         return update(c ->
             c.set(uid).equalTo(row::getUid)
             .set(name).equalTo(row::getName)
@@ -183,8 +183,8 @@ public interface DocumentPOMapper extends CommonCountMapper, CommonDeleteMapper,
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: document")
-    default int updateByPrimaryKeySelective(DocumentPO row) {
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: documents")
+    default int updateByPrimaryKeySelective(Document row) {
         return update(c ->
             c.set(uid).equalToWhenPresent(row::getUid)
             .set(name).equalToWhenPresent(row::getName)
